@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<title>Model Viewer Example</title>
+		<style>
+			body {
+				background: #7f7f7f;
+				font-size: 18px;
+				font-weight: bold;		
+			}
+
+			li {
+				margin-bottom: 1em;
+			}
+
+			model-viewer {
+				border: 1px solid black;
+			}
+		</style>
+		<script src="./js/libraries/model-viewer-legacy.js"></script>
+	</head>
+
+	<body>
+		<ol>
+			<li>
+				Static:<br>
+				<model-viewer style="background: #aaaaff;" src="./models/test.glb"></model-viewer>
+			</li>
+			<li>
+				Camera controls:<br>
+				<model-viewer style="background: #aaffaa;" src="./models/test.glb" camera-controls></model-viewer>
+			</li>
+			<li>
+				AR:<br>
+				<model-viewer style="background: #ffaaaa;" src="./models/test.glb"
+				shadow-intensity="1"
+	    		ar
+	    		ar-modes="webxr scene-viewer quick-look fallback"
+	    		camera-controls>	    			
+	    		</model-viewer>
+			</li>
+		</ol>
+		
+		<!-- 
+		https://www.khronos.org/blog/view-a-gltf-model-in-ar-on-android-without-leaving-your-browser
+
+		<model-viewer
+	    src="../assets/Chair.glb"
+	    ios-src="../assets/Chair.usdz"
+	    poster="../assets/ChairPoster.png"
+	    camera-orbit="1.2195rad 1.362rad auto"
+	    shadow-intensity="1"
+	    ar
+	    ar-modes="webxr scene-viewer quick-look fallback"
+	    camera-controls
+	    alt="3D model of a chair with footrest"
+		>
+		-->
+	</body>
+
+</html>
